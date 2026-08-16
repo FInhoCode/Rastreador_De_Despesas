@@ -1,0 +1,42 @@
+{
+  "despesas": [
+    {
+      "data": "03/08/2026",
+      "descricao": "Caderno",
+      "valor": 10,
+      "categoria": "Educação"
+    },
+    {
+      "data": "03/08/2026",
+      "descricao": "Sabão",
+      "valor": 5,
+      "categoria": "Saúde"
+    },
+    {
+      "data": "03/08/2026",
+      "descricao": "Terno",
+      "valor": 100,
+      "categoria": "Vestuário"
+    },
+    {
+      "data": "06/08/2026",
+      "descricao": "PS5",
+      "valor": 3000,
+      "categoria": "Lazer"
+    }
+  ],
+  "orcamento": {
+    "Janeiro": 150,
+    "Fevereiro": 150,
+    "Março": 150,
+    "Abril": 150,
+    "Maio": 150,
+    "Junho": 150,
+    "Julho": 150,
+    "Agosto": 150,
+    "Setembro": 150,
+    "Outubro": 150,
+    "Novembro": 150,
+    "Dezembro": 150
+  }
+}
