@@ -65,7 +65,7 @@ function operacao(string $operacao): void
             echo "Informe as seguintes informações:\n";
 
             $descricao = readline("Descrição da despesa: ");
-            $valor = readline("Valor da despesa: ");
+            $valor = readline("Valor da despesa(OBS: Para números decimais, utilize o '.'): ");
 
             foreach ($categoriasDespesas as $id => $cat) {
                 echo "id: " . $id + 1 . " - categoria: $cat \n";
@@ -101,7 +101,7 @@ function operacao(string $operacao): void
 
             $id = readline('Digite o id da despesa: ');
             $descricao = readline('Digite a nova descrição: ');
-            $valor = readline('Digite o novo valor: ');
+            $valor = readline('Digite o novo valor(OBS: Para números decimais, utilize o '.'): ');
 
             foreach ($categoriasDespesas as $id_c => $cat) {
                 echo "id: " . $id_c + 1 . " - categoria: $cat \n";

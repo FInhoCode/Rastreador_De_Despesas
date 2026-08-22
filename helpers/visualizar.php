@@ -45,7 +45,7 @@ function visualizar(string $opcao)
 
                         $chave++;
 
-                        echo "id: $chave | descrição: {$despesa->descricao} | valor: {$despesa->valor} | data: {$despesa->data} | categoria: {$despesa->categoria}\n";
+                        echo "id: $chave | descrição: {$despesa->descricao} | valor: R$ " . number_format($despesa->valor, 2, ',', '.') . " | data: {$despesa->data} | categoria: {$despesa->categoria}\n";
 
                         $valores[] += $despesa->valor;
                     }
@@ -79,7 +79,7 @@ function visualizar(string $opcao)
                     echo "Custo total por mês:\n";
 
                     foreach ($custo_mes as $mes => $custo_total) {
-                        echo "$mes: $custo_total\n";
+                        echo "$mes: R$ " . number_format($custo_total, 2, ',', '.') . PHP_EOL;
                     }
                     
                     // Verifica a soma dos valores por categoria. Em seguida são agrupadas num array referente as suas respectivas categorias. $categoriasDespesas as $categoria
@@ -103,12 +103,12 @@ function visualizar(string $opcao)
                     echo "Custo total por categoria:\n";
 
                     foreach($custo_categoria as $categoria => $total){
-                        echo "$categoria: $total\n";
+                        echo "$categoria: R$ " . number_format($total, 2, ',', '.') . PHP_EOL;
                     }
                     
                     // Exibe a soma do valor de todas as despesas.
 
-                    echo "Custo total em despesas: " . array_sum($custo_mes) . PHP_EOL;
+                    echo "Custo total em despesas: R$ " . number_format(array_sum($custo_mes), 2, ',', '.') . PHP_EOL;
 
                     if(orcamento($custo_mes)) echo "Em média, suas despesas ultrapassam o seu orçamento.";
 
@@ -160,12 +160,12 @@ function visualizar(string $opcao)
                         echo "Custo total por categoria: \n";
 
                         foreach($custo_categoria as $categoria => $valor_cat){
-                            echo "$categoria: $valor_cat\n";
+                            echo "$categoria: R$ " . number_format($valor_cat, 2, ',', '.') . PHP_EOL;
                         }
 
                         $mes--; // É decrementado para acesso ao índice do array.
 
-                        echo "Custo total em despesas no mês de {$meses_do_ano[$mes]}: $custo_total" . PHP_EOL;
+                        echo "Custo total em despesas no mês de {$meses_do_ano[$mes]}: R$ " . number_format($custo_total, 2, ',', '.') . PHP_EOL;
 
                         $comparacao_custo = [$meses_do_ano[$mes] => $custo_total];
 
