@@ -13,8 +13,6 @@ Inspirado no desafio [Expense Tracker do roadmap.sh](https://roadmap.sh/projects
 - [Arquitetura e Tecnologias](#-arquitetura-e-tecnologias)
 - [Pré-requisitos](#-pré-requisitos)
 - [Como Instalar e Executar](#-como-instalar-e-executar)
-- [Exemplos de Uso](#-exemplos-de-uso)
-- [Estrutura do Arquivo de Dados](#-estrutura-do-arquivo-de-dados)
 - [Licença](#-licença)
 
 ---
@@ -41,7 +39,7 @@ O objetivo principal é oferecer uma solução direta para registrar, visualizar
 
 ## 🛠️ Arquitetura e Tecnologias
 
-- **Linguagem:** PHP (Puro / Standard Library)
+- **Linguagem:** PHP (Puro)
 - **Paradigma:** Programação Estruturada
 - **Armazenamento:** Arquivo `JSON` local (não requer banco de dados SQL)
 - **Execução:** CLI (Command Line Interface) — sem necessidade de servidor web como Apache ou Nginx.
@@ -64,8 +62,8 @@ php -v
 
 1. **Clone o repositório** (ou faça o download dos arquivos):
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
+   git clone https://github.com/FInhoCode/Rastreador_De_Despesas.git
+   cd Rastreador_De_Despesas
    ```
 
 2. **Execute a aplicação:**
@@ -74,61 +72,6 @@ php -v
    ```bash
    php index.php
    ```
-
----
-
-## 💡 Exemplos de Uso
-
-Abaixo estão alguns exemplos de como interagir com o CLI:
-
-### 1. Adicionar uma nova despesa
-```bash
-php index.php add --description "Almoço" --amount 25.50
-# Saída esperada: Despesa adicionada com sucesso (ID: 1)
-```
-
-### 2. Listar todas as despesas
-```bash
-php index.php list
-# Saída esperada:
-# ID  Data        Descrição  Valor
-# 1   2026-08-22  Almoço     R$ 25.50
-```
-
-### 3. Exibir o resumo total de gastos
-```bash
-php index.php summary
-# Saída esperada: Total de despesas: R$ 25.50
-```
-
-### 4. Exibir o resumo de um mês específico
-```bash
-php index.php summary --month 8
-# Saída esperada: Total de despesas no mês 8: R$ 25.50
-```
-
-### 5. Deletar uma despesa pelo ID
-```bash
-php index.php delete --id 1
-# Saída esperada: Despesa deletada com sucesso
-```
-
----
-
-## 📁 Estrutura do Arquivo de Dados
-
-Os dados são armazenados localmente no formato JSON (geralmente em um arquivo `expenses.json`). Exemplo da estrutura interna:
-
-```json
-[
-  {
-    "id": 1,
-    "date": "2026-08-22",
-    "description": "Almoço",
-    "amount": 25.50
-  }
-]
-```
 
 ---
 
