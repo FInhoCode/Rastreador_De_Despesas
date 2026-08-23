@@ -19,7 +19,7 @@ Inspirado no desafio [Expense Tracker do roadmap.sh](https://roadmap.sh/projects
 
 ## 📑 Sobre o Projeto
 
-O **Expense Tracker CLI** é uma aplicação para terminal criada para ajudar desenvolvedores e usuários a monitorar seus gastos diários sem a necessidade de interfaces gráficas complexas ou bancos de dados pesados.
+O **Rastreador de Despesas** é uma aplicação para terminal criada para ajudar desenvolvedores e usuários a monitorar seus gastos diários sem a necessidade de interfaces gráficas complexas ou bancos de dados pesados.
 
 O objetivo principal é oferecer uma solução direta para registrar, visualizar, filtrar e remover despesas de forma rápida e prática.
 
