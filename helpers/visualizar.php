@@ -50,7 +50,7 @@ function visualizar(string $opcao)
                         $valores[] += $despesa->valor;
                     }
 
-                    if(orcamento($valores)) echo "Em média, suas despesas ultrapassam o seu orçamento.";
+                    if($resultado = orcamento($valores)) echo $resultado;
 
                     break;
 
@@ -110,7 +110,7 @@ function visualizar(string $opcao)
 
                     echo "Custo total em despesas: R$ " . number_format(array_sum($custo_mes), 2, ',', '.') . PHP_EOL;
 
-                    if(orcamento($custo_mes)) echo "Em média, suas despesas ultrapassam o seu orçamento.";
+                    if($resultado = orcamento($custo_mes)) echo $resultado;
 
                     break;
 
@@ -169,7 +169,7 @@ function visualizar(string $opcao)
 
                         $comparacao_custo = [$meses_do_ano[$mes] => $custo_total];
 
-                        if(orcamento($comparacao_custo)) echo "Suas despesas do mês especificado ultrapassam o seu orçamento.";
+                        if($resultado = orcamento($comparacao_custo)) echo $resultado;
 
                     } else {
                         echo "Valor não numérico ou mês inexistente. Tente novamtente.";

@@ -30,19 +30,19 @@ function orcamento(array $custo = null)
 
                     $orcamento_ultrapassado = array_sum($custo) / count($custo) > array_sum($orcamento) / count($orcamento) ? true : false;
 
-                    return $orcamento_ultrapassado;
+                    return $orcamento_ultrapassado ? "Em média, suas despesas ultrapassam o seu orçamento.":false;
 
                 }else{
 
-                    // Como orçamento possuem todas as chaves que o array custo pode ter, isto é possível.
-                    $orcamento_ultrapassado = $custo[key($custo)] > $orcamento[key($custo)] ? true:false;
+                    // Verifica se o valor da despesa é maior do que a média do orçamento. Foi utilizado a função key para retornar o valor do custo independente se o array é associativo ou indexado.
+                    $orcamento_ultrapassado = $custo[key($custo)] > array_sum($orcamento) / count($orcamento) ? true:false;
 
-                    return $orcamento_ultrapassado;
+                    return $orcamento_ultrapassado ? "Em média, sua despesa ultrapassa o seu orçamento.":false;
 
                 }
 
             } else {
-                echo "Nenhum orçamento disponível para verificação. Adicione um orçamento e tente novamente. ";
+                return "Nenhum orçamento disponível para verificação. Adicione um orçamento e tente novamente. ";
             }
         } else {
             // Adiciona o orçamento por mês
