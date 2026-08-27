@@ -50,6 +50,7 @@ function visualizar(string $opcao)
                         $valores[] += $despesa->valor;
                     }
 
+                    echo "-------------------\n";
                     if($resultado = orcamento($valores)) echo $resultado;
 
                     break;
@@ -75,7 +76,8 @@ function visualizar(string $opcao)
                     }
 
                     $custo_mes = array_combine($meses_do_ano, $despesas_do_ano);
-
+                    
+                    echo "-------------------\n";
                     echo "Custo total por mês:\n";
 
                     foreach ($custo_mes as $mes => $custo_total) {
@@ -100,6 +102,7 @@ function visualizar(string $opcao)
 
                     $custo_categoria = array_combine($categoriasDespesas, $total_categorias);
 
+                    echo "-------------------\n";
                     echo "Custo total por categoria:\n";
 
                     foreach($custo_categoria as $categoria => $total){
@@ -108,7 +111,9 @@ function visualizar(string $opcao)
                     
                     // Exibe a soma do valor de todas as despesas.
 
+                    echo "-------------------\n";
                     echo "Custo total em despesas: R$ " . number_format(array_sum($custo_mes), 2, ',', '.') . PHP_EOL;
+                    echo "-------------------\n";
 
                     if($resultado = orcamento($custo_mes)) echo $resultado;
 
@@ -157,6 +162,7 @@ function visualizar(string $opcao)
 
                         $custo_categoria = array_combine($categoriasDespesas, $total_categorias);
 
+                        echo "-------------------\n";
                         echo "Custo total por categoria: \n";
 
                         foreach($custo_categoria as $categoria => $valor_cat){
@@ -165,10 +171,12 @@ function visualizar(string $opcao)
 
                         $mes--; // É decrementado para acesso ao índice do array.
 
+                        echo "-------------------\n";
                         echo "Custo total em despesas no mês de {$meses_do_ano[$mes]}: R$ " . number_format($custo_total, 2, ',', '.') . PHP_EOL;
 
                         $comparacao_custo = [$meses_do_ano[$mes] => $custo_total];
 
+                        echo "-------------------\n";
                         if($resultado = orcamento($comparacao_custo)) echo $resultado;
 
                     } else {
